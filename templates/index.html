@@ -6,6 +6,18 @@
 </head>
 <body>
     <h1>Student Task Manager</h1>
-    <p>Welcome to your first full stack project 🎉</p>
+    <p>Add a task and see it appear below.</p>
+
+    <form action="/add" method="POST">
+        <input type="text" name="title" placeholder="Enter a task" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Tasks</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
